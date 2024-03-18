@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Grades</title>
+    <script>
+        const studentName = "Dale";
+
+        function createTable() {
+            const table = document.createElement("table");
+            const caption = document.createElement("caption");
+            caption.textContent = studentName;
+            table.appendChild(caption);
+
+            const headerRow = document.createElement("tr");
+            const subjectHeader = document.createElement("th");
+            subjectHeader.textContent = "Subjects";
+            const gradeHeader = document.createElement("th");
+            gradeHeader.textContent = "Grades";
+            headerRow.appendChild(subjectHeader);
+            headerRow.appendChild(gradeHeader);
+            table.appendChild(headerRow);
+
+            const dataRow1 = document.createElement("tr");
+            const subjectData1 = document.createElement("td");
+            subjectData1.textContent = "Math";
+            const gradeData1 = document.createElement("td");
+            gradeData1.textContent = "88%";
+            dataRow1.appendChild(subjectData1);
+            dataRow1.appendChild(gradeData1);
+            table.appendChild(dataRow1);
+
+            const dataRow2 = document.createElement("tr");
+            const subjectData2 = document.createElement("td");
+            subjectData2.textContent = "English";
+            const gradeData2 = document.createElement("td");
+            gradeData2.textContent = "75%";
+            dataRow2.appendChild(subjectData2);
+            dataRow2.appendChild(gradeData2);
+            table.appendChild(dataRow2);
+
+            const dataRow3 = document.createElement("tr");
+            const subjectData3 = document.createElement("td");
+            subjectData3.textContent = "Science";
+            const gradeData3 = document.createElement("td");
+            gradeData3.textContent = "92%";
+            dataRow3.appendChild(subjectData3);
+            dataRow3.appendChild(gradeData3);
+            table.appendChild(dataRow3);
+            
+            const dataRow4 = document.createElement("tr");
+            const subjectData4 = document.createElement("td");
+            subjectData4.textContent = "Average";
+            const gradeData4 = document.createElement("td");
+            gradeData4.textContent = "85%";
+            dataRow4.appendChild(subjectData4);
+            dataRow4.appendChild(gradeData4);
+            table.appendChild(dataRow4);
+
+            const body = document.querySelector("body");
+            body.appendChild(table);
+
+            const style = document.createElement("style");
+            style.textContent = `
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+                th, td {
+                    text-align: left;
+                    padding: 8px;
+                }
+                tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+                th {
+                    background-color: #04AA6D;
+                    color: white;
+                }
+                caption {
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    padding: 16px;
+                }
+            `;
+            body.appendChild(style);
+        }
+
+        window.onload = createTable;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

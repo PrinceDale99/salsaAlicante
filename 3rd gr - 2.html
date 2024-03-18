@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Input</title>
+<script>
+window.onload = function() {
+  var name = prompt("Please enter your name:");
+  if (name !== null) {
+    var confirmSubmission = confirm("Are you sure you want to submit your name?");
+    if (confirmSubmission) {
+      alert("Your name is: " + name);
+    } else {
+      window.close();
+    }
+  } else {
+    window.close();
+  }
+}
+</script>
+</head>
+<body>
+</body>
+</html>
